@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: aiproduct
+    environment:
+      POSTGRES_USER: aiproduct
+      POSTGRES_PASSWORD: aiproduct
+      POSTGRES_DB: aiproduct
+    ports:
+      - "65432:5432"
+    volumes:
+      - aiproduct:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: aiproduct-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  aiproduct:
