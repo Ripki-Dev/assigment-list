@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      - POSTGRES_DB=aiproduct
+      - POSTGRES_USER=aiproduct
+      - POSTGRES_PASSWORD=aiproduct
+    ports:
+      - "65432:5432"
+
+  redis:
+    image: redis:7.2.4
+    restart: always
+    ports:
+      - "6379:6379"

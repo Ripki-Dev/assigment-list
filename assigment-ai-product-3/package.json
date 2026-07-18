@@ -1,0 +1,29 @@
+{
+  "name": "ai-product-3-monorepo",
+  "version": "1.0.0",
+  "description": "AI Writing Assistant Monorepo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "worker:dev": "pnpm run --filter=api worker:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.9.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv-cli": "^11.0.0"
+  }
+}
